@@ -1,0 +1,90 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,600;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+*{
+    font-family: "Poppins", sans-serif; 
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+/*use to center */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    color: #fff; 
+    background: #2c2f48;
+}
+/* display grid to have things under*/
+.contact-container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    background: #2c2f48;
+    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.form-container {
+    padding: 20px;
+}
+.form-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.contact-form{
+    display: grid;
+    row-gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    outline: none; 
+    background: #2c2f48;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 0.4rem;
+}
+.contact-form textarea {
+    resize: none;
+    height: 50px;
+}
+.contact-form .send-btn {
+    border: none;
+    outline: none;
+    background: #00dbde;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact-form .send-btn:hover{
+    background: hsl(181, 100%, 44%, 0.8);
+    transition: 0.5s all linear;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+/*Responsive page */
+@media (max-width: 964px){
+    .contact-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+@media (max-width: 700px){
+    .grid-template-columns{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20rem !important;
+    }
+}
